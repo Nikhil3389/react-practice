@@ -1,5 +1,5 @@
 import logo from './logo.svg';
-import React, { Component } from 'react';
+import React, { Component, useDeferredValue } from 'react';
 
 import './App.css';
 import Students from './components/Students';
@@ -35,14 +35,46 @@ import Students from './components/Students';
 // }
   
 
-function App()
+
+// ####################### props apps.js #########################
+
+// function App()
+// {
+//   return(
+    // <div className="App">
+    //   <h1>Hello</h1>
+    //   <Students name ={"Nikhil"} email={"abc@gmail.com"}/>
+    //   {/* <Students email ={"abc@gmail.com"}/> */}
+    // </div>
+//   )
+// }
+// export default App;
+
+
+
+export default class App extends Component
+
 {
-  return(
-    <div className="App">
+
+
+  constructor()
+  {
+    super();
+    this.state={
+      name: "NIKHIL"
+    }
+  }
+  render()
+  {
+    return(
+         <div className="App">
       <h1>Hello</h1>
-      <Students name ={"Nikhil"} email={"abc@gmail.com"}/>
+      <Students name ={this.state.name}/>
+      <button onClick={() => this.setState({name:"Kataria"})}>Update Name</button>
       {/* <Students email ={"abc@gmail.com"}/> */}
     </div>
-  )
+
+
+    )
+  }
 }
-export default App;
