@@ -79,30 +79,49 @@ import Students from './components/Students';
 //   }
 // }
 
+// #################### TAKING INPUT AND HIDING ################  
+// function App()
 
+// {
+//   const [data,setData] = useState(null)
+//   const [print,setPrint] =  useState(false)
+//   function getData(val)
+//   {
+//     console.log(val.target.value)
+//     setData(val.target.value)
+//     setPrint(false)
+//   }
+//   return(
+//     <div className="App">
+//       {
+//         print?
+//         <h1>Hello</h1>
+//         :
+//         null
+//       }
+      
+//       <input type="text" onChange={getData} />
+//       <button onClick={() => setPrint(true)}>Print Data</button>
+//       {/* <Students email ={"abc@gmail.com"}/> */}
+//     </div>
+//   )
+// }
+// export default App;
+// ##################  Toggle Button ###############
 function App()
 
 {
-  const [data,setData] = useState(null)
-  const [print,setPrint] =  useState(false)
-  function getData(val)
-  {
-    console.log(val.target.value)
-    setData(val.target.value)
-    setPrint(false)
-  }
+  const [status,setStatus] = useState(false);
+  
   return(
     <div className="App">
       {
-        print?
-        <h1>Hello</h1>
+        status ?
+        <h1>Helll0</h1>
         :
         null
       }
-      
-      <input type="text" onChange={getData} />
-      <button onClick={() => setPrint(true)}>Print Data</button>
-      {/* <Students email ={"abc@gmail.com"}/> */}
+      <button onClick={() => setStatus(!status)}>Toggle</button>
     </div>
   )
 }
