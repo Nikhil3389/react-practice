@@ -3,7 +3,8 @@ import { useState } from "react";
 
 function Profile()
 {
-    const [login,setLogin] =useState(2)
+    // const [login,setLogin] =useState(2)
+    const login = 2
     return(
         <div>
             {

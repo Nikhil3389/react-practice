@@ -4,6 +4,7 @@ import React, { Component, useDeferredValue, useState } from 'react';
 import './App.css';
 import Students from './components/Students';
 import Profile from './components/Profile';
+import User from './components/User';
 // adding using state class
 
 
@@ -198,11 +199,14 @@ import Profile from './components/Profile';
 // export default App;
 // #################### If condition ################
 function App(){
+  function getData(){
+    alert("here is data")
+  }
   return(
 
 
     <div className="App">
-      <Profile/>
+      <User data={getData}/>
     </div>
   )
 }
