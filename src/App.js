@@ -198,22 +198,35 @@ import User from './components/User';
 // }
 // export default App;
 // #################### If condition ################
-function App(){
+// function App(){
 
-  useEffect(() =>{
-    console.log("useEffect is working")
-  })
-  function getData(){
+//   useEffect(() =>{
+//     console.log("useEffect is working")
+//   })
+//   function getData(){
    
   
-  alert("here is data")
+//   alert("here is data")
+//   }
+//   return(
+
+
+//     <div className="App">
+//       <User data={getData}/>
+//     </div>
+//   )
+// }
+// export default App
+
+// ###############   REACT JS SEND DATA CHILD TO PARENTS ###############
+function App() {
+  function getData(data) {
+    alert(data);
   }
-  return(
-
-
+  return (
     <div className="App">
-      <User data={getData}/>
+      <User alert={getData} />
     </div>
-  )
+  );
 }
-export default App
+export default App;
