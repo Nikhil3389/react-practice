@@ -1,12 +1,31 @@
-function User(props){
-    const data ="Nikhil"
-    return(
-        <div>
+// function User(props){
+//     const data ="Nikhil"
+//     return(
+//         <div>
 
-            <h1>Hello User</h1>
-            <button onClick={props.alert(data)}>Click</button>
-        </div>
+import { PureComponent } from "react";
 
-    )
+//             <h1>Hello User</h1>
+//             <button onClick={props.alert(data)}>Click</button>
+//         </div>
+
+//     )
+// }
+// export default User
+
+// #################### FOR PURE COMPONENTS #############################
+class User extends PureComponent
+{
+    render()
+    {
+        console.log("checking ")
+        return(
+            <div className="App">
+
+
+                <h1>User components {this.props.count}</h1>
+            </div>
+        )
+    }
 }
-export default User
+export default User;

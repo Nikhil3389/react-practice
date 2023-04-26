@@ -219,14 +219,38 @@ import User from './components/User';
 // export default App
 
 // ###############   REACT JS SEND DATA CHILD TO PARENTS ###############
-function App() {
-  function getData(data) {
-    alert(data);
+// function App() {
+//   function getData(data) {
+//     alert(data);
+//   }
+//   return (
+//     <div className="App">
+//       <User alert={getData} />
+//     </div>
+//   );
+// }
+// export default App;
+// #################### PURE COMPONENT ######################
+class App extends Component{
+  constructor()
+  {
+    super();
+    this.state={
+      count:1
+    }
   }
-  return (
-    <div className="App">
-      <User alert={getData} />
-    </div>
-  );
+  render()
+  {
+    return (
+      <div className='App'>
+        <h1></h1>
+        <User count={this.state.count}/>
+        <button onClick={()=>this.setState({count:this.state.count+1})}>
+          Click
+        </button>
+      </div>
+
+    )
+  }
 }
 export default App;
