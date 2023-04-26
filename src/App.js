@@ -251,24 +251,25 @@ import User from "./components/User";
 //   }
 // }
 // export default App;
+// ############################ UNCONTROLLED COMPONENTS #########################
 
-function App() {
-  let refInput = useRef(null);
-  function submitForm(e) {
-    e.preventDefault();
-    console.log("Input 1 :", refInput.current.value);
-    let input3  = document.getElementById('input3').value
-    console.log('input 2 : ' , input3)
-  }
-  return (
-    <div className="App">
-      <h1>Uncontrolled Components</h1>
-      <form onSubmit={submitForm}>
-        <input ref={refInput} type="text" /> <br /> <br />
-        <input id = "input3" type="text" /> <br /> <br />
-        <button> Submit</button>
-      </form>
-    </div>
-  );
-}
-export default App;
+// function App() {
+//   let refInput = useRef(null);
+//   function submitForm(e) {
+//     e.preventDefault();
+//     console.log("Input 1 :", refInput.current.value);
+//     let input3  = document.getElementById('input3').value
+//     console.log('input 2 : ' , input3)
+//   }
+//   return (
+//     <div className="App">
+//       <h1>Uncontrolled Components</h1>
+//       <form onSubmit={submitForm}>
+//         <input ref={refInput} type="text" /> <br /> <br />
+//         <input id = "input3" type="text" /> <br /> <br />
+//         <button> Submit</button>
+//       </form>
+//     </div>
+//   );
+// }
+// export default App;
