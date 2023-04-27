@@ -273,3 +273,31 @@ import User from "./components/User";
 //   );
 // }
 // export default App;
+
+function App() {
+ 
+  
+  return (
+    <div className="App">
+    <h1>HOC</h1>
+    <HOCRed cmp={Counter}/>
+
+    </div>
+  );
+}
+function HOCRed(props){
+  return <h2 style={{backgroundColor:'red' }}> Red : <props.cmp/> </h2>
+}
+function Counter(){
+  const [data,setData] = useState(0)
+  return (
+    <div>
+      <h1>count : {data}</h1>
+      <button onClick={() => setData(data + 1)}> Click</button>
+    </div>
+  );
+
+}
+
+
+export default App;
