@@ -308,6 +308,7 @@ import Navigation from "./Navigation";
 function App() {
   return (
     <div className="App">
+      <h1>Dyanmic Programming </h1>
       <Nav />
       <Navigation/>
     </div>
