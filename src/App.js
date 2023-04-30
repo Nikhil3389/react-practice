@@ -274,30 +274,67 @@ import User from "./components/User";
 // }
 // export default App;
 
+// #################################  HOC ########################
+
+// function App() {
+
+//   return (
+//     <div className="App">
+//     <h1>HOC</h1>
+//     <HOCRed cmp={Counter}/>
+
+//     </div>
+//   );
+// }
+// function HOCRed(props){
+//   return <h2 style={{backgroundColor:'red' }}> Red : <props.cmp/> </h2>
+// }
+// function Counter(){
+//   const [data,setData] = useState(0)
+//   return (
+//     <div>
+//       <h1>count : {data}</h1>
+//       <button onClick={() => setData(data + 1)}> Click</button>
+//     </div>
+//   );
+
+// }
+
+// export default App;
+
+// ##########################  ROUTING ########################
+
+import { BrowserRouter as Router, Link, Routes, Route } from "react-router-dom";
 function App() {
- 
-  
   return (
     <div className="App">
-    <h1>HOC</h1>
-    <HOCRed cmp={Counter}/>
-
+      <Router>
+        <Link to="/home"> Home Page</Link>
+        <Link to="/about"> About Page</Link>
+        <Routes>
+          <Route path="/home" element={<Home />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </Router>
     </div>
   );
 }
-function HOCRed(props){
-  return <h2 style={{backgroundColor:'red' }}> Red : <props.cmp/> </h2>
-}
-function Counter(){
-  const [data,setData] = useState(0)
+
+function Home() {
   return (
     <div>
-      <h1>count : {data}</h1>
-      <button onClick={() => setData(data + 1)}> Click</button>
+      <h1>Home Page </h1>
+      <p> This is a Home Page</p>
     </div>
   );
-
 }
+function About(){
+  return (
+    <div>
 
-
+      <h1> About Page </h1>
+      <p>This is a Home Page</p>
+    </div>
+  )
+}
 export default App;
