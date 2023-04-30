@@ -303,38 +303,17 @@ import User from "./components/User";
 // export default App;
 
 // ##########################  ROUTING ########################
-
-import { BrowserRouter as Router, Link, Routes, Route } from "react-router-dom";
+import Nav from "./Nav";
+import Navigation from "./Navigation";
 function App() {
   return (
     <div className="App">
-      <Router>
-        <Link to="/home"> Home Page</Link>
-        <Link to="/about"> About Page</Link>
-        <Routes>
-          <Route path="/home" element={<Home />} />
-          <Route path="/about" element={<About />} />
-        </Routes>
-      </Router>
+      <Nav />
+      <Navigation/>
     </div>
   );
 }
 
-function Home() {
-  return (
-    <div>
-      <h1>Home Page </h1>
-      <p> This is a Home Page</p>
-    </div>
-  );
-}
-function About(){
-  return (
-    <div>
 
-      <h1> About Page </h1>
-      <p>This is a Home Page</p>
-    </div>
-  )
-}
+
 export default App;
