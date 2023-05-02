@@ -303,18 +303,41 @@ import User from "./components/User";
 // export default App;
 
 // ##########################  ROUTING ########################
-import Nav from "./Nav";
-import Navigation from "./Navigation";
+// import Nav from "./Nav";
+// import Navigation from "./Navigation";
+// function App() {
+//   return (
+//     <div className="App">
+//       <h1>Dyanmic Programming </h1>
+//       <Nav />
+//       <Navigation/>
+//     </div>
+//   );
+// }
+
+
+
+// export default App;
+
+// ################################## PREVIOUS STATE ####################
 function App() {
+  const [count,setCount] = useState(1)
+  function updateCounter(){
+    for(let i =0;i<5;i++)
+    {
+       setCount((pre) => {
+         return pre + 1;
+       });
+    }
+   
+  }
   return (
     <div className="App">
-      <h1>Dyanmic Programming </h1>
-      <Nav />
-      <Navigation/>
+      <h1>Previous State </h1>
+      <h1>{count}</h1>
+      <button onClick={updateCounter}> Update</button>
     </div>
   );
 }
-
-
 
 export default App;
