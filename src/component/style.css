@@ -1,0 +1,45 @@
+nav {
+  background-color: #48f232;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+nav li {
+  float: center;
+}
+
+nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+nav li:first-child a {
+  font-weight: bold;
+}
+
+nav li a:hover {
+  background-color: #3cd11e;
+}
+
+
+.footer {
+ background-color: #48f232;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+.footer p {
+  margin-bottom: 0;
+}
+.footer svg {
+  vertical-align: middle;
+  margin-left: 5px;
+}
